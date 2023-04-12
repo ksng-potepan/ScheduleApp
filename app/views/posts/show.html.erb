@@ -1,0 +1,33 @@
+<h3>ー <%= @post.title %> ー</h3>
+
+<div class="link-to-home">
+<%= link_to "☜一覧に戻る", "/" %>
+</div>
+
+<table class="show-table">
+    <tr>
+        <th>開始日</th>
+        <td><%= @post.start_date %></td>
+    </tr>
+    <tr>
+        <th>終了日</th>
+        <td><%= @post.end_date %></td>
+    </tr>
+    <tr>
+        <th>終日</th>
+        <td>
+        <% if @post.all_day == true %>
+              ⚪︎
+        <% else %>
+        <% end %>
+        </td>
+    </tr>
+    <tr>
+        <th>MEMO</th>
+        <td style="word-break: break-word"><%= @post.content %></td>         
+    </tr>
+</table>
+
+<div class="link-to-edit">
+<%= link_to "編集する", "/posts/#{@post.id}/edit"  %>
+</div>
