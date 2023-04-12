@@ -1,0 +1,32 @@
+<h3>ー 内容の変更 ー</h3>
+
+<%= form_tag("/posts/#{@post.id}/update", class: :form) do %>
+
+    <dl>
+        <dt>タイトル<span>*</span></dt>
+        <dd><input name="title" type="text" class="form-item" value="<%= @post.title %>"></dd>
+    </dl>
+    <dl>
+        <dt>開始日<span>*</span></dt>
+        <dd><input name="start_date" type="date" class="form-item" value="<%= @post.start_date %>"></dd>
+    </dl>
+    <dl>
+        <dt>終了日<span>*</span></dt>
+        <dd><input name="end_date" type="date" class="form-item" value="<%= @post.end_date %>"></dd>
+    </dl>
+    <dl>
+        <dt></dt>
+        <dt><input  type="checkbox" value="true" name="all_day" <%= "checked" if @post.all_day == true  %>>
+        終日</dd>
+    </dl>
+    <dl>
+        <dt>MEMO</dt>
+        <dd><textarea name="content" ><%= @post.content %></textarea></dd>
+    </dl>
+   
+    <div class="edit-btn">
+    <%= link_to "キャンセル", "/", class: "btn" %>
+    <input type="submit" value="保存" />
+    </div>
+
+<% end %>

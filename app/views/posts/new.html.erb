@@ -1,0 +1,32 @@
+<h3>ー 新規作成 ー</h3>
+
+<%= form_tag("/posts/create", class: :form) do %>
+
+    <dl>
+        <dt>タイトル<span>*</span></dt>
+        <dd><input name="title" type="text" class="form-item" placeholder="最大２０文字" value="<%= @post.title %>"></dd>
+    </dl>
+    <dl>
+        <dt>開始日<span>*</span></dt>
+        <dd><input name="start_date" type="date" class="form-item" value="<%= @post.start_date %>"></dd>
+    </dl>
+    <dl>
+        <dt>終了日<span>*</span></dt>
+        <dd><input name="end_date" type="date" class="form-item" value="<%= @post.end_date %>"></dd>
+    </dl>
+    <dl>
+        <dt></dt>
+        <dd><input name="all_day" type="checkbox" value="true" <%= "checked" if @post.all_day == true  %>>
+        終日</dd>
+    </dl>
+    <dl>
+        <dt>MEMO</dt>
+        <dd><textarea name="content" placeholder="最大５００文字"><%= @post.content %></textarea></dd>
+    </dl>
+
+    <div class="edit-btn">
+    <%= link_to "キャンセル", "/", class: "btn" %>
+    <input type="submit" value="保存" />
+    </div>
+    
+<% end %>

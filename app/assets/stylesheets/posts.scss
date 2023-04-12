@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+}
+
+span{
+    color: rgb(168, 6, 58);
+}
+
+.form {
+    margin: auto;
+    width: 45%;
+    height: 470px;
+    background-color: rgb(251, 243, 235);
+    border: solid 2px rgb(255, 181, 218);
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+form dl {
+	display: flex;
+    text-align: left;
+    font-size: 18px;
+    margin: 10px;
+    color: rgb(79, 82, 86);
+}
+form dl dt {
+	width: 150px;
+}
+
+.form-item {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    content: " *";
+}
+
+textarea {
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+input[type="submit"] {
+    border: none;
+    border-radius: 4px;
+    color: rgb(79, 82, 86);
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid  rgb(253, 199, 226);
+    margin-left: 20px;
+    padding: 5px 30px;
+    float: right;
+    background-color: rgb(253, 199, 226);
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    color: rgb(79, 82, 86);
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid  rgb(253, 199, 226);
+    margin-left: 420px;
+    padding: 5px 5px;
+    width: 80px;
+    background-color: rgb(253, 199, 226);
+}
+
+.edit-btn {
+    display: flex;
+}

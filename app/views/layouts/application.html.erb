@@ -10,6 +10,24 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to "スケジュール管理アプリ", "/" %>
+      </div>
+      <div class="header-menu">
+        <%= link_to "新規作成", "/posts/new" %>
+      </div>
+    </header>
+
+    <% if flash[:notice]%>
+      <div class="notice"><%= flash[:notice]%></div>
+    <% end %>
+
+    <% if flash[:alert]%>
+      <div class="alert"><%= flash[:alert]%></div>
+    <% end %>
+    
     <%= yield %>
+
   </body>
 </html>
